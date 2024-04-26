@@ -1,0 +1,138 @@
+%center-elements {
+  display: flex;
+  align-items: center;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .weather-container {
+    @extend %center-elements;
+    justify-content: center;
+    width: 45%;
+    height: 80%;
+    margin: 130px;
+    margin-left: 28%;
+    padding: 0;
+  }
+
+  .box-left {
+    background-image: url("https://img.freepik.com/free-photo/fantasy-style-clouds_23-2151057636.jpg");
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: calc(100% / 2);
+    height: 384px;
+
+    span {
+      margin-bottom: 30px;
+      color: white;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .degree{
+      font-size: 80px;
+      margin-bottom: 1px;
+      color: white ;
+    }
+  }
+
+  
+
+  .box-right {
+    position: relative; 
+    background-image: url("https://www.treehugger.com/thmb/z9XWueIDAUQI6QvXfCR6JyuFzl8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2018__08__CollectionOfCloudsAgainstABlueSky-8cae9f3109d14dcf98d9facc5775222f.jpg");
+    background-size: cover;
+    padding: 14px;
+    width: calc(100% / 3);
+    color: white;
+
+    img {
+      position: relative;
+      width: 59px;
+      margin-left: 80px;
+      margin-bottom: 10px;
+    }
+
+    h1, p, input, span, hr {
+      position: relative; 
+      z-index: 1; 
+      @extend %center-elements;
+      justify-content: space-between;
+    }
+
+    .weather-details {
+      margin: 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    h1 {
+      margin-top: -3px;
+      justify-content: center;
+      font-size: 45px;
+    }
+
+    .country {
+      justify-content: center;
+    }
+
+    input[type="text"]::placeholder {
+      color: #fff; 
+    }
+
+    .search {
+      display: flex;
+
+      input {
+        border: 0;
+        background: transparent;
+        border-bottom: 1px solid #fff;
+        color: white;
+        padding: 5px;
+        padding-left: 10px;
+  
+      }
+
+      .fas.fa-search {
+        @extend %center-elements;
+        justify-content: center;
+        color: white; 
+        font-size: 15px; 
+        font-weight: 600;
+        position: relative;
+        cursor: pointer; 
+        margin-left: 20px;
+        background: rgba(150, 150, 150, 0.493);
+        border-radius: 50%; /* Make it circular */
+        width: 32px; /* Diameter of the circle */
+        height: 32px; /* Diameter of the circle */
+
+      }
+
+    }
+
+    .fa-solid.fa-cloud-moon {
+      margin-left: 10px;
+    }
+
+  }
+  
+  .box-right::before {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+  }
+  
+}
